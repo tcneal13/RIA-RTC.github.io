@@ -1,0 +1,128 @@
+﻿html {
+    height: 100%;
+}
+
+body {
+    font-family: RobotoDraft, 'Helvetica Neue', sans-serif;
+    line-height: 1.8;
+    width: 100%;
+    margin: 0;
+    padding-bottom: 5em;
+    color: #444;
+    background: #F0FFFF;
+}
+
+#page-main {
+    position: relative;
+}
+
+/*#region navigation*/
+#main-navbar {
+    transition: all .25s;
+    border: 0;
+    background: #1072c2;
+}
+
+    #main-navbar a {
+        font-size: 1em;
+        font-weight: 500;
+        color: #eee;
+        outline: none;
+    }
+
+    #main-navbar navbar-brand {
+        font-size: 1em;
+        font-weight: 700;
+        padding-right: 2.5em;
+        letter-spacing: 2.5px;
+        text-transform: uppercase;
+        color: #fff;
+    }
+
+    #main-navbar a:hover, #main-navbar a:focus {
+        color: #fff;
+    }
+
+    #main-navbar .navbar-toggle .icon-bar {
+        background: #fff;
+    }
+
+    #main-navbar.scrolled {
+        background: #1072c2;
+    }
+
+a {
+    transition: all .25s;
+    text-decoration: none;
+    outline: none;
+}
+/*#endregion*/
+
+/*#region singlePhoto*/
+.single-photo {
+    margin-top: 5em;
+}
+
+    .single-photo h2 {
+        margin-bottom: 1.75em;
+    }
+
+    .single-photo .photo-data-list {
+        font-size: 1.5em;
+    }
+
+        .single-photo .photo-data-list li {
+            margin-bottom: .5em;
+        }
+/*#endregion*/
+
+.fade-anim.ng-enter,
+.fade-anim.ng-leave {
+    transition: all .4s;
+    opacity: 0;
+}
+
+    .fade-anim.ng-enter.ng-enter-active,
+    .fade-anim.ng-leave {
+        opacity: 1;
+    }
+
+        .fade-anim.ng-leave.ng-leave-active,
+        .fade-anim.ng-enter {
+            width: 0;
+            opacity: 0;
+        }
+
+
+
+/*#region backButton*/
+.button-container {
+    position: absolute;
+    top: -40px;
+    right: 0;
+    width: 100%;
+    text-align: center;
+}
+
+    .button-container .button-back {
+        font-size: 2.5em;
+        line-height: 80px;
+        display: inline-block;
+        width: 80px;
+        height: 80px;
+        text-indent: -.05em;
+        color: #333;
+        border-radius: 40px;
+        background: #fff;
+        box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.5);
+    }
+
+        .button-container .button-back:hover, .button-container .button-back:focus {
+            box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.25);
+        }
+
+        .button-container .button-back:active {
+            box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.5);
+        }
+/*#endregion*/
+

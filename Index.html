@@ -1,15 +1,56 @@
 ﻿<!DOCTYPE html>
-<html ng-app="demo">
+<html ng-app="nasaApp" class="ng-scope">
 <head>
-    <meta charset="utf-8"/>
-    <title>AngularJs Sample</title>
-    <script src="Scripts/angular.min.js"></script>
-    <script src="app/app.js"></script>
-    <script src="app/controllers/demoController.js"></script>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>NASA &middot; APOD_DB</title>
+    <!-- css files -->
+    <link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+    <script src="https://kit.fontawesome.com/2c1ca5c8a6.js" crossorigin="anonymous"></script>
+
 </head>
-<body>
-    <div ng-controller="demoController">
-        <h2>{{Message}}</h2>
+<body ng-controller="RootController" class="ng-scope" data-gr-c-s-loaded="true">
+    <!-- content -->
+
+    <header id="main-navbar" class="navbar navbar-default navbar-fixed-top">
+        <div class="navbar-inner">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-menu">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">
+                        <i class="fa fa-home"></i>
+                        {{appTitle}}
+                    </a>
+                </div>
+                <nav id="main-menu" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li class="menu-popular-photos"><a href="./index.html#/">Popular Photos</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <div class="section-search"></div>
+    <div class="view-container">
+        <div id="page-main" ng-view=""></div>
     </div>
+    <!-- js files -->
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular-route.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular-animate.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="./app/app.js"></script>
+    <script src="./app/controllers/rootController.js"></script>
+    <script src="./app/controllers/listController.js"></script>
 </body>
 </html>

@@ -1,0 +1,34 @@
+﻿
+    <div class="container">
+        <div class="list-photos row">
+            <h2>
+                <i class="fa fa-rocket"></i>
+                {{pageHeading}}
+            </h2>
+            <ul class="photos-thumb-list clearfix">
+                <li class="photo-item fade-anim" style="text-align:center;" ng-repeat="photo in photosList">
+
+                    <p>
+                        <strong>Copyright: </strong>{{photo.copyright}}</br>
+                        <strong>Date: </strong> {{photo.date}}</br>
+                        <strong>Explanation: </strong>{{photo.explanation}}</br>
+                        {{photo.hdurl}}</br>
+                    </p>
+                    <img src="{{photo.hdurl}}" alt="Astronomy Picture of the Day" />
+                    <p>
+                        <strong>Media Type:  </strong>{{photo.media_type}}</br>
+                        <strong>Service Version:  </strong>{{photo.service_version}}</br>
+                        <strong>Photo Title:  </strong>{{photo.title}}</br>
+                        <strong>Photo URL:   </strong>{{photo.url}}
+                    </p>
+                </li>
+            </ul>
+            <!--<p ng-show="photoList.length == 0">loading movies...</p>-->
+        </div>
+    </div>
+    <!--<div class="load-more-wrapper">
+        <button ng-click="getPhotosList()" ng-hide="photosList.length == 0" class="load-more">
+            <i class="fa fa-camera-retro"></i>
+            Load More
+        </button>
+    </div>-->
